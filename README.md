@@ -1,20 +1,15 @@
-# docker-angular6
+# docker-angular6-php7-mysql
 
-To start a new Angular project you must connect with container and run bash inside.
+
+To start the container (also start angular runner)
 ```sh
-# docker exec -it 'contener id' bash
+# docker-compose exec angul bash
 ```
 
-Next inside /var/www/html run
+your project is inside 
 ```sh
-# ng new 'project name'
-```
-
-To start created project run
-```sh
-# ng serve --host 0.0.0.0
+# src/alexAng6
 ```
 
 Now you can see your project at http://localhost
 
-# docker-angular-php7-mysql
