@@ -22,3 +22,10 @@ RUN rm -rf /var/lib/apt
 # install Angular
 RUN npm install -g @angular/cli
 
+# entrypoint
+COPY ./files/entrypoint.sh /usr/local/bin/entrypoint
+RUN chmod +x /usr/local/bin/entrypoint
+ENTRYPOINT ["/usr/local/bin/entrypoint"]
+
+
+
