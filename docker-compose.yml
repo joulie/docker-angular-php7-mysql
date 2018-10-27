@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  angul:
+    build:
+      context: ./system
+    volumes:
+      - ./src/:/var/www/html/
+    ports:
+      - 80:4200
+    links:
+     - mysql_db:mysql_db
+
+  mysql_db:
+    build:
+      context: ./mysql
+    ports:
+      - 13306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: dockerangular6
+      MYSQL_DATABASE: dockerangular6
+      MYSQL_USER: apache2
+      MYSQL_PASSWORD: dockerangular6
