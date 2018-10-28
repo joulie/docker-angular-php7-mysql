@@ -1,14 +1,33 @@
 # docker-angular6-php7-mysql
 
+more information @ https://angular.io/
 
-To start the container (also start angular runner)
-```sh
-# docker-compose exec angular bash
+launch the container
 ```
-
-your project is inside 
-```sh
-# src/alexAng6
+cd angularAndDocker
+docker-compose up -d
+```
+you can automatically start the runner
+```
+uncomment the 2 lines od the file angularAndDocker/.docker/files/entrypoint.sh
+```
+else if you prefer to make a new app 
+```
+* outside the container : 
+cd src
+ng new angular-tour-of-heroes
+```
+```
+* go inside the container :
+docker-compose exec angular bash
+cd angular-tour-of-heroes
+ng serve --host 0.0.0.0
+# ctrl-c when you want to stop
+```
+```
+* go back outside the container to have files as non-root :
+cd src/angular-tour-of-heroes
+ng generate component heroes
 ```
 
 Now you can see your project at http://localhost
