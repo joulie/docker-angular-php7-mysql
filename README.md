@@ -3,7 +3,7 @@
 
 To start the container (also start angular runner)
 ```sh
-# docker-compose exec angul bash
+# docker-compose exec angular bash
 ```
 
 your project is inside 

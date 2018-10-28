@@ -1,9 +1,9 @@
 version: '3'
 
 services:
-  angul:
+  angular:
     build:
-      context: ./system
+      context: ./.docker
     volumes:
       - ./src/:/var/www/html/
     ports:
@@ -13,7 +13,7 @@ services:
 
   mysql_db:
     build:
-      context: ./mysql
+      context: .docker/mysql
     ports:
       - 13306:3306
     environment:
