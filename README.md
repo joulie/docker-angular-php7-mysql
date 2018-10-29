@@ -9,7 +9,7 @@ docker-compose up -d
 ```
 the runner will start automatically
 ```
-you can undo wby comment the 2 lines od the file angularAndDocker/.docker/files/entrypoint.sh
+you can undo by comment the 2 lines od the file angularAndDocker/.docker/files/entrypoint.sh
 ```
 else if you prefer to make a new app 
 ```
@@ -29,6 +29,10 @@ ng serve --host 0.0.0.0
 cd src/angular-tour-of-heroes
 ng generate component heroes
 ng generate component hero-detail
+```
+create a service
+``` 
+ng generate service hero
 ```
 
 Now you can see your project at http://localhost
