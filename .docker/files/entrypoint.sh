@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-cd angularAndDocker
+cd angular-tour-of-heroes
 ng serve --host 0.0.0.0
