@@ -10,8 +10,6 @@ services:
       - 80:4200
     links:
      - mysql_db:mysql_db
-    #entrypoint:
-    # - ./.docker/angular/entrypoint.sh:/usr/local/bin/entrypoint
 
   mysql_db:
     build:

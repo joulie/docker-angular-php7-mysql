@@ -1,4 +1,4 @@
-# docker-angular6
+# docker-angular-php7-mysql
 
 To start a new Angular project you must connect with container and run bash inside.
 ```sh
@@ -18,4 +18,4 @@ To start created project run
 
 Now you can see your project at http://localhost
 
-# docker-angular-php7-mysql
+# warning : this is only a skeleton and you will need to modify src/.gitignore to save any new project
