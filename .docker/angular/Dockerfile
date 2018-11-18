@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y mysql-client
 # install node.js
 RUN apt-get install -y gnupg
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
-RUN apt-get install -y nodejs
+RUN apt-get install -y nodejs nano
 
 #clean
 RUN rm -rf /var/lib/apt
@@ -26,6 +26,5 @@ RUN npm install -g @angular/cli
 # entrypoint
 COPY ./entrypoint.sh /usr/local/bin/entrypoint
 RUN chmod +x /usr/local/bin/entrypoint
-#RUN /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["/usr/local/bin/entrypoint"]
 
