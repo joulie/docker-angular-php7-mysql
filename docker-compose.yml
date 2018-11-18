@@ -1,19 +1,21 @@
 version: '3'
 
 services:
-  angul:
+  angular:
     build:
-      context: ./system
+      context: ./.docker/angular
     volumes:
       - ./src/:/var/www/html/
     ports:
       - 80:4200
     links:
      - mysql_db:mysql_db
+    #entrypoint:
+    # - ./.docker/angular/entrypoint.sh:/usr/local/bin/entrypoint
 
   mysql_db:
     build:
-      context: ./mysql
+      context: ./.docker/mysql
     ports:
       - 13306:3306
     environment:
