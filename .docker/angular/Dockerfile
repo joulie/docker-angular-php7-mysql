@@ -24,7 +24,8 @@ RUN npm install -g npm@latest
 RUN npm install -g @angular/cli
 
 # entrypoint
-COPY ./entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
-RUN /usr/local/bin/entrypoint.sh
+COPY ./entrypoint.sh /usr/local/bin/entrypoint
+RUN chmod +x /usr/local/bin/entrypoint
+#RUN /usr/local/bin/entrypoint.sh
+ENTRYPOINT ["/usr/local/bin/entrypoint"]
 

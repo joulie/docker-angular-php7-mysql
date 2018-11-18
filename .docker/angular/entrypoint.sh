@@ -1,3 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-ls -al
+cd opc
+npm install
+ng serve --host 0.0.0.0
