@@ -20,6 +20,7 @@ RUN apt-get install -y nodejs
 RUN rm -rf /var/lib/apt
 
 # install Angular
+RUN npm install -g npm@latest
 RUN npm install -g @angular/cli
 
 # entrypoint
